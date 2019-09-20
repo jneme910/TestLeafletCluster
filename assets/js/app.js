@@ -422,8 +422,8 @@ var groupedOverlays = {
     "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;OSD": museumLayer
   },
   "Reference": {
-    "Boroughs": boroughs,
-    "Subway Lines": subwayLines
+    "Soil": boroughs,
+    "MLRA": subwayLines
   }
 };
 
