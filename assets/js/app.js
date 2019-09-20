@@ -416,7 +416,7 @@ var baseLayers = {
   "Aerial Imagery": usgsImagery
 };
 
- /*var groupedOverlays = {
+ var groupedOverlays = {
   "Points of Interest": {
     "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Points": theaterLayer,
     "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;OSD": museumLayer
@@ -425,7 +425,7 @@ var baseLayers = {
     "Soil": boroughs,
     "MLRA": subwayLines
   }
-}; */
+}; 
 
 var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
   collapsed: isCollapsed
