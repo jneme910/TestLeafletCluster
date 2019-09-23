@@ -306,13 +306,6 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
   museums.addData(data);
 });
 
-map = L.map("map", {
-  zoom: 3,
-  center: [26.770933, -41.992188],
-  layers: [cartoLight,  markerClusters, highlight] /*,
-  zoomControl: false,
-  attributionControl: false */
-});
 
 /* Layer control listeners that allow for a single markerClusters layer */
 map.on("overlayadd", function(e) {
@@ -593,6 +586,13 @@ $(document).one("ajaxStop", function () {
   });
   $(".twitter-typeahead").css("position", "static");
   $(".twitter-typeahead").css("display", "block");
+});
+map = L.map("map", {
+  zoom: 3,
+  center: [26.770933, -41.992188],
+  layers: [cartoLight,  markerClusters, highlight] /*,
+  zoomControl: false,
+  attributionControl: false */
 });
 
 // Leaflet patch to make layer control scrollable on touch browsers
