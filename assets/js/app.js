@@ -141,7 +141,7 @@ var highlightStyle = {
   radius: 10
 };
 
-var boroughs = L.geoJson(null, {
+/*var boroughs = L.geoJson(null, {
   style: function (feature) {
     return {
       color: "black",
@@ -162,7 +162,7 @@ var boroughs = L.geoJson(null, {
 $.getJSON("data/boroughs.geojson", function (data) {
   boroughs.addData(data);
 });
-
+*/
 //Create a color dictionary based off of subway route_id
 var subwayColors = {"1":"#ff3135", "2":"#ff3135", "3":"ff3135", "4":"#009b2e",
     "5":"#009b2e", "6":"#009b2e", "7":"#ce06cb", "A":"#fd9a00", "C":"#fd9a00",
