@@ -564,10 +564,10 @@ $(document).one("ajaxStop", function () {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
       }
-      map.setView([datum.lat, datum.lng], 17);
+     /* map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
-      }
+      }*/
     }
     if (datum.source === "Museums") {
       if (!map.hasLayer(museumLayer)) {
