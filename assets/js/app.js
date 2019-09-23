@@ -1,8 +1,8 @@
 var map, featureList, boroughSearch = [], theaterSearch = [], museumSearch = [];
 
-/*$(window).resize(function() {
+$(window).resize(function() {
   sizeLayerControl();
-});*/
+});
 
 $(document).on("click", ".feature-row", function(e) {
   $(document).off("mouseout", ".feature-row", clearHighlight);
@@ -23,11 +23,11 @@ $("#about-btn").click(function() {
   return false;
 });
 
-/*$("#full-extent-btn").click(function() {
+$("#full-extent-btn").click(function() {
   map.fitBounds(boroughs.getBounds());
   $(".navbar-collapse.in").collapse("hide");
   return false;
-}); */
+});
 
 $("#legend-btn").click(function() {
   $("#legendModal").modal("show");
