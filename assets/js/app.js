@@ -315,7 +315,7 @@ map = L.map("map", {
 });
 
 /* Layer control listeners that allow for a single markerClusters layer */
-/*map.on("overlayadd", function(e) {
+map.on("overlayadd", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.addLayer(theaters);
     syncSidebar();
@@ -325,8 +325,8 @@ map = L.map("map", {
     syncSidebar();
   }
 });
-*/
-/*map.on("overlayremove", function(e) {
+
+map.on("overlayremove", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.removeLayer(theaters);
     syncSidebar();
@@ -336,7 +336,7 @@ map = L.map("map", {
     syncSidebar();
   }
 });
-*/
+
 /* Filter sidebar feature list to only show features in current map bounds */
 map.on("moveend", function (e) {
   syncSidebar();
