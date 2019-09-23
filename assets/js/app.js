@@ -534,12 +534,12 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'>Boroughs</h4>"
     }
   }, {
-    name: "Theaters",
-    displayKey: "name",
+    Series: "Theaters",
+    displayKey: "Series",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Theaters</h4>",
-      suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
+      header: "<h4 class='typeahead-header'><img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Series</h4>",
+      suggestion: Handlebars.compile(["{{Series}}<br>&nbsp;<small>{{User_Pedon_ID}}</small>"].join(""))
     }
   }, {
     name: "Museums",
