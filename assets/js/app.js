@@ -227,7 +227,7 @@ var theaters = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconPrimary_Lab_Report: "assets/img/theater.png",
+        iconUrl: "assets/img/theater.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -238,7 +238,7 @@ var theaters = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Series</th><td>" + feature.properties.Series + "</td></tr>" + "<tr><th>Phone</th><td>" + feature.properties.Pedon_Key + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.ADDRESS1 + "</td></tr>" + "<tr><th>Website</th><td><a class='Primary_Lab_Report-break' href='" + feature.properties.Primary_Lab_Report + "' target='_blank'>" + feature.properties.Primary_Lab_Report + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Series</th><td>" + feature.properties.Series + "</td></tr>" + "<tr><th>Phone</th><td>" + feature.properties.Pedon_Key + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.ADDRESS1 + "</td></tr>" + "<tr><th>Website</th><td><a class='url-break' href='" + feature.properties.URL + "' target='_blank'>" + feature.properties.URL + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.Series);
@@ -270,7 +270,7 @@ var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconPrimary_Lab_Report: "assets/img/museum.png",
+        iconUrl: "assets/img/museum.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -281,7 +281,7 @@ var museums = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Series</th><td>" + feature.properties.Series + "</td></tr>" + "<tr><th>Pedon Key</th><td>" + feature.properties.Pedon_Key + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.Soil_Classification + "</td></tr>" + "<tr><th>Website</th><td><a class='Primary_Lab_Report-break' href='" + feature.properties.Primary_Lab_Report + "' target='_blank'>" + feature.properties.Primary_Lab_Report + "</a></td></tr>" + "<table>";
+      var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Series</th><td>" + feature.properties.Series + "</td></tr>" + "<tr><th>Pedon Key</th><td>" + feature.properties.Pedon_Key + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.Soil_Classification + "</td></tr>" + "<tr><th>Website</th><td><a class='url-break' href='" + feature.properties.URL + "' target='_blank'>" + feature.properties.URL + "</a></td></tr>" + "<table>";
       layer.on({
         click: function (e) {
           $("#feature-title").html(feature.properties.Series);
@@ -302,7 +302,7 @@ var museums = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/test.geojson", function (data) {
+$.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
   museums.addData(data);
 });
 
@@ -493,7 +493,7 @@ $(document).one("ajaxStop", function () {
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     remote: {
-      Primary_Lab_Report: "http://api.geoSeriess.org/searchJSON?userSeries=bootleaf&featureClass=P&maxRows=5&countryCode=US&Series_startsWith=%QUERY",
+      url: "http://api.geoSeriess.org/searchJSON?userSeries=bootleaf&featureClass=P&maxRows=5&countryCode=US&Series_startsWith=%QUERY",
       filter: function (data) {
         return $.map(data.geoSeriess, function (result) {
           return {
@@ -506,7 +506,7 @@ $(document).one("ajaxStop", function () {
       },
       ajax: {
         beforeSend: function (jqXhr, settings) {
-          settings.Primary_Lab_Report += "&east=" + map.getBounds().getEast() + "&west=" + map.getBounds().getWest() + "&north=" + map.getBounds().getNorth() + "&south=" + map.getBounds().getSouth();
+          settings.url += "&east=" + map.getBounds().getEast() + "&west=" + map.getBounds().getWest() + "&north=" + map.getBounds().getNorth() + "&south=" + map.getBounds().getSouth();
           $("#searchicon").removeClass("fa-search").addClass("fa-refresh fa-spin");
         },
         complete: function (jqXHR, status) {
