@@ -573,10 +573,10 @@ $(document).one("ajaxStop", function () {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
       }
-      map.setView([datum.lat, datum.lng], 17);
+   /*   map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
-      }
+      }*/
     }
     if (datum.source === "GeoNames") {
       map.setView([datum.lat, datum.lng], 14);
