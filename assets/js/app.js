@@ -315,7 +315,7 @@ map = L.map("map", {
 });
 
 /* Layer control listeners that allow for a single markerClusters layer */
-map.on("overlayadd", function(e) {
+/*map.on("overlayadd", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.addLayer(theaters);
     syncSidebar();
@@ -325,8 +325,8 @@ map.on("overlayadd", function(e) {
     syncSidebar();
   }
 });
-
-map.on("overlayremove", function(e) {
+*/
+/*map.on("overlayremove", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.removeLayer(theaters);
     syncSidebar();
@@ -336,7 +336,7 @@ map.on("overlayremove", function(e) {
     syncSidebar();
   }
 });
-
+*/
 /* Filter sidebar feature list to only show features in current map bounds */
 map.on("moveend", function (e) {
   syncSidebar();
@@ -417,7 +417,7 @@ var baseLayers = {
 };
 
 var groupedOverlays = {
-  "Points of Interest": {
+  "Soil Series Filter": {
     "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Theaters": theaterLayer /*,
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer*/
   } /*,
