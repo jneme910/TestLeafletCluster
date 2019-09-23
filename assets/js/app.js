@@ -560,19 +560,19 @@ $(document).one("ajaxStop", function () {
      /*if (datum.source === "Boroughs") {
       map.fitBounds(datum.bounds);
     }*/
-    if (datum.source === "Theaters") {
+    /* if (datum.source === "Theaters") {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
-      }
+      }*/
      /* map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
       }*/
     }
-    if (datum.source === "Museums") {
+   /* if (datum.source === "Museums") {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
-      }
+      }*/
    /*   map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
