@@ -557,26 +557,26 @@ $(document).one("ajaxStop", function () {
       header: "<h4 class='typeahead-header'><img src='assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
-     /*if (datum.source === "Boroughs") {
+    if (datum.source === "Boroughs") {
       map.fitBounds(datum.bounds);
-    }*/
+    }
     if (datum.source === "Theaters") {
       if (!map.hasLayer(theaterLayer)) {
         map.addLayer(theaterLayer);
       }
-     /* map.setView([datum.lat, datum.lng], 17);
+      map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
-      }*/
+      }
     }
     if (datum.source === "Museums") {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
       }
-   /*   map.setView([datum.lat, datum.lng], 17);
+      map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
-      }*/
+      }
     }
     if (datum.source === "GeoNames") {
       map.setView([datum.lat, datum.lng], 14);
