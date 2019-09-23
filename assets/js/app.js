@@ -309,13 +309,13 @@ $.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
 map = L.map("map", {
   zoom: 3,
   center: [26.770933, -41.992188],
-  layers: [cartoLight, boroughs, markerClusters, highlight],
+  layers: [cartoLight,  markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
 });
 
 /* Layer control listeners that allow for a single markerClusters layer */
-/*map.on("overlayadd", function(e) {
+map.on("overlayadd", function(e) {
   if (e.layer === theaterLayer) {
     markerClusters.addLayer(theaters);
     syncSidebar();
@@ -336,7 +336,7 @@ map.on("overlayremove", function(e) {
     syncSidebar();
   }
 });
-*/
+
 /* Filter sidebar feature list to only show features in current map bounds */
 map.on("moveend", function (e) {
   syncSidebar();
@@ -363,7 +363,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='https://github.com/jneme910/TestLeafletCluster'>Jason Nemecek</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://bryanmcbride.com'>bryanmcbride.com</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
   return div;
 };
 map.addControl(attributionControl);
@@ -418,7 +418,7 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Points": theaterLayer,
+    "<img src='assets/img/marker-icon.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
     "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
   "Reference": {
