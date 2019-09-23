@@ -9,11 +9,11 @@ $(document).on("click", ".feature-row", function(e) {
   sidebarClick(parseInt($(this).attr("id"), 10));
 });
 
-if ( !("ontouchstart" in window) ) {
+/*if ( !("ontouchstart" in window) ) {
   $(document).on("mouseover", ".feature-row", function(e) {
     highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
   });
-}
+}*/
 
 $(document).on("mouseout", ".feature-row", clearHighlight);
 
@@ -23,11 +23,11 @@ $("#about-btn").click(function() {
   return false;
 });
 
-/*$("#full-extent-btn").click(function() {
+$("#full-extent-btn").click(function() {
   map.fitBounds(boroughs.getBounds());
   $(".navbar-collapse.in").collapse("hide");
   return false;
-}); */
+});
 
 $("#legend-btn").click(function() {
   $("#legendModal").modal("show");
