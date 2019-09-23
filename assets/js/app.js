@@ -310,8 +310,8 @@ map = L.map("map", {
   zoom: 3,
   center: [26.770933, -41.992188],
   layers: [cartoLight,  markerClusters, highlight],
-  zoomControl: false,
-  attributionControl: false
+  /*zoomControl: false,
+  attributionControl: false */
 });
 
 /* Layer control listeners that allow for a single markerClusters layer */
