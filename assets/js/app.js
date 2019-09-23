@@ -259,7 +259,7 @@ var theaters = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/test.geojson", function (data) {
+$.getJSON("data/KSSL_FeaturesToJSON.geojson", function (data) {
   theaters.addData(data);
   map.addLayer(theaterLayer);
 });
