@@ -569,10 +569,10 @@ $(document).one("ajaxStop", function () {
         map._layers[datum.id].fire("click");
       }*/
     }
-   /* if (datum.source === "Museums") {
+    if (datum.source === "Museums") {
       if (!map.hasLayer(museumLayer)) {
         map.addLayer(museumLayer);
-      }*/
+      }
    /*   map.setView([datum.lat, datum.lng], 17);
       if (map._layers[datum.id]) {
         map._layers[datum.id].fire("click");
