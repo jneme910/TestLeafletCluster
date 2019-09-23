@@ -587,6 +587,13 @@ $(document).one("ajaxStop", function () {
   $(".twitter-typeahead").css("position", "static");
   $(".twitter-typeahead").css("display", "block");
 });
+map = L.map("map", {
+  zoom: 3,
+  center: [26.770933, -41.992188],
+  layers: [cartoLight,  markerClusters, highlight] /*,
+  zoomControl: false,
+  attributionControl: false */
+});
 
 // Leaflet patch to make layer control scrollable on touch browsers
 var container = $(".leaflet-control-layers")[0];
