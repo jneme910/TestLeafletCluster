@@ -467,9 +467,9 @@ $(document).one("ajaxStop", function () {
   });
 
   var theatersBH = new Bloodhound({
-    name: "Theaters",
+    Series: "Series",
     datumTokenizer: function (d) {
-      return Bloodhound.tokenizers.whitespace(d.name);
+      return Bloodhound.tokenizers.whitespace(d.Series);
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     local: theaterSearch,
